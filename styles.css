@@ -576,7 +576,7 @@ ul {
 
 .video-placeholder {
     width: 100%;
-    aspect-ratio: 16 /9;
+    aspect-ratio: 16 / 9;
     background: linear-gradient(135deg, var(--bg-tertiary), var(--bg-primary));
     border-radius: var(--radius-md);
     display: flex;
