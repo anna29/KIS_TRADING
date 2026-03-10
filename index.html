@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KIS Trading | Professional Trading Made Simple</title>
+    <meta name="description"
+        content="Keep It Simple. Professional trading coaching by David, Director & Senior Trading Coach. Master the markets with clarity and consistency.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="KIS Trading Logo" class="header-logo">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#dashboard" class="nav-link">Market Intelligence</a>
+                <a href="#media" class="nav-link">Media</a>
+                <a href="#about" class="nav-link">Our Story</a>
+                <a href="#philosophy" class="nav-link">Methodology</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#discord" class="btn btn-discord-outline hidden-mobile">
+                    <i class="fa-brands fa-discord"></i> Community
+                </a>
+                <a href="#consultation" class="btn btn-primary btn-cta">
+                    Consultation <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-grid-overlay"></div>
+        <div class="container hero-container text-center">
+            <div class="hero-content">
+                <div class="badge glow"><span class="pulse dot-small"></span> Institutional-Grade Coaching</div>
+                <h1 class="hero-title">Navigate the Markets with <br><span class="text-gradient">Precision.</span></h1>
+                <p class="hero-description mx-auto">Helping aspirational individuals grow capital with clarity,
+                    consistency, and
+                    a winning mindset. No lagging indicators. Keep It Simple.</p>
+                <div class="hero-actions justify-center">
+                    <a href="#dashboard" class="btn btn-primary btn-large">View Live Markets</a>
+                    <a href="#about" class="btn btn-outline btn-large">Meet David</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Dashboard Section (Live Chart + Bloomberg-style News Feed) -->
+    <section id="dashboard" class="dashboard section-padding bg-darker border-top relative">
+        <div class="dashboard-glow"></div>
+        <div class="container">
+            <div class="section-header text-center mb-60">
+                <h2 class="section-title">Market <span class="text-accent">Intelligence</span></h2>
+                <p class="section-description">Real-time data feeds and leading stock analysis straight from the wire.
+                </p>
+            </div>
+
+            <div class="dashboard-grid">
+                <!-- Live Chart Widget -->
+                <div class="dashboard-card glass-panel chart-panel">
+                    <div class="card-header-sleek">
+                        <div class="flex-align">
+                            <i class="fa-solid fa-chart-candlestick text-accent"></i>
+                            <h3>Live Market Action</h3>
+                        </div>
+                        <div class="live-indicator"><span class="pulse red"></span> LIVE FEED</div>
+                    </div>
+                    <div class="tv-widget-wrapper" style="height: 750px;">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container" style="height:100%;width:100%">
+                            <div class="tradingview-widget-container__widget"
+                                style="height:calc(100% - 32px);width:100%"></div>
+                            <script type="text/javascript"
+                                src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+                                async>
+                                    {
+                                        "autosize": true,
+                                            "symbol": "NASDAQ:AAPL",
+                                                "interval": "D",
+                                                    "timezone": "Etc/UTC",
+                                                        "theme": "dark",
+                                                            "style": "1",
+                                                                "locale": "en",
+                                                                    "enable_publishing": false,
+                                                                        "backgroundColor": "rgba(11, 16, 27, 0)",
+                                                                            "gridColor": "rgba(255, 255, 255, 0.04)",
+                                                                                "hide_top_toolbar": false,
+                                                                                    "hide_legend": true,
+                                                                                        "save_image": false,
+                                                                                            "container_id": "tradingview_1a2b3"
+                                    }
+                                </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+                </div>
+
+                <!-- Live News Widget -->
+                <div class="dashboard-card glass-panel news-panel">
+                    <div class="card-header-sleek border-bottom-subtle">
+                        <div class="flex-align">
+                            <i class="fa-regular fa-newspaper text-accent"></i>
+                            <h3>Market Wire</h3>
+                        </div>
+                    </div>
+                    <div class="tv-widget-wrapper" style="height: 750px;">
+                        <!-- TradingView Widget BEGIN -->
+                        <div class="tradingview-widget-container" style="height:100%;width:100%">
+                            <div class="tradingview-widget-container__widget"
+                                style="height:calc(100% - 32px);width:100%"></div>
+                            <script type="text/javascript"
+                                src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                                    {
+                                        "feedMode": "all_symbols",
+                                            "isTransparent": true,
+                                                "displayMode": "regular",
+                                                    "width": "100%",
+                                                        "height": "100%",
+                                                            "colorTheme": "dark",
+                                                                "locale": "en"
+                                    }
+                                </script>
+                        </div>
+                        <!-- TradingView Widget END -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media / Video Section -->
+    <section id="media" class="media-section section-padding border-top relative">
+        <div class="container">
+            <div class="section-header text-center mb-60">
+                <h2 class="section-title">Premium <span class="text-accent">Insights</span></h2>
+                <p class="section-description">Watch our exclusive technical breakdowns and strategy sessions.</p>
+            </div>
+
+            <div class="video-container-wrapper glass-panel mx-auto">
+                <!-- Video Player Placeholder -->
+                <div class="video-placeholder">
+                    <div class="play-button-pulse">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <h4>Client Video Upload placeholder</h4>
+                    <p class="text-muted text-sm mt-10">Embed your YouTube or Vimeo link here via iframe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Discord CTA Section -->
+    <section id="discord" class="discord-section section-padding border-top relative bg-darker overflow-hidden">
+        <div class="discord-glow"></div>
+        <div class="container relative z-10">
+            <div class="discord-banner glass-panel premium-border">
+                <div class="discord-content">
+                    <div class="discord-badge">Members Only</div>
+                    <h2 class="discord-title">Join the <span style="color: #5865F2;">Discord</span> Vault.</h2>
+                    <p class="discord-desc">Trade alongside our experienced community. Get real-time alerts, daily
+                        technical outlooks, and direct access to mentorship.</p>
+
+                    <div class="discord-stats">
+                        <div class="stat-item">
+                            <span class="dot green"></span>
+                            <span><strong>142</strong> Online</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="dot grey"></span>
+                            <span><strong>1,024</strong> Members</span>
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-discord btn-large mt-20">
+                        <i class="fa-brands fa-discord"></i> Join The Community
+                    </a>
+                </div>
+                <div class="discord-visual">
+                    <div class="discord-icon-3d">
+                        <i class="fa-brands fa-discord"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Banner -->
+    <div class="trust-banner border-top border-bottom">
+        <div class="container trust-container">
+            <span class="trust-text">Trusted by ambitious traders worldwide</span>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <span class="trust-rating">5.0 Star Rating</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
+        <div class="container about-container">
+            <div class="about-image">
+                <div class="image-wrapper glass-panel p-20">
+                    <!-- Placeholder for David's Headshot -->
+                    <div class="headshot-placeholder premium-placeholder">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="experience-badge glass-panel-dark">
+                        <span class="exp-number text-gradient-gold">10+</span>
+                        <span class="exp-text">Years<br>Experience</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-content">
+                <h2 class="section-title">Meet <span class="text-accent">David</span></h2>
+                <h3 class="section-subtitle">Director & Senior Trading Coach</h3>
+                <p class="lead-text">Trading doesn't have to be complicated. The most robust edges are found in
+                    simplicity.</p>
+                <p>At KIS Trading, we believe that success in the financial markets comes from discipline, psychological
+                    edge, and a straightforward approach to price action. My name is David, and my mission is to cut
+                    through the industry noise to equip you with the exact tools you need to succeed.</p>
+                <p>Whether you're just starting or looking to find consistency, my personalized coaching
+                    programs are designed to elevate your trading game without the overwhelm.</p>
+                <ul class="feature-list">
+                    <li><i class="fa-solid fa-check text-accent"></i> Proven, simple strategies</li>
+                    <li><i class="fa-solid fa-check text-accent"></i> Elite psychological conditioning</li>
+                    <li><i class="fa-solid fa-check text-accent"></i> 1-on-1 personalized mentorship</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section id="philosophy" class="philosophy section-padding bg-darker border-top">
+        <div class="container">
+            <div class="section-header text-center mb-60">
+                <h2 class="section-title">The <span class="text-accent">"Keep It Simple"</span> Edge</h2>
+                <p class="section-description mx-auto">We focus strictly on what moves markets, eliminating clutter to
+                    give
+                    you a clear, actionable methodology.</p>
+            </div>
+            <div class="grid-3">
+                <div class="service-card glass-panel hover-lift">
+                    <div class="card-icon glow-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Price Action Mastery</h3>
+                    <p>Learn to read the naked chart. No messy indicators—just a deep understanding of market structure
+                        and liquidity.</p>
+                </div>
+                <div class="service-card glass-panel hover-lift">
+                    <div class="card-icon glow-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Psychological Edge</h3>
+                    <p>Develop the stoic mindset required to execute your trade plan consistently without emotional
+                        interference.</p>
+                </div>
+                <div class="service-card glass-panel hover-lift">
+                    <div class="card-icon glow-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Risk Management</h3>
+                    <p>Capital preservation is rule #1. Master the mathematics that guarantee long-term
+                        survival and exponential growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq section-padding">
+        <div class="container faq-container" style="max-width: 800px; margin: 0 auto;">
+            <div class="section-header text-center mb-60">
+                <h2 class="section-title">Frequently Asked <span class="text-accent">Questions</span></h2>
+                <p class="section-description mx-auto">Everything you need to know about working with KIS Trading.</p>
+            </div>
+
+            <div class="accordion" style="display: flex; flex-direction: column; gap: 16px;">
+                <div class="accordion-item glass-panel" style="overflow: hidden;">
+                    <button class="accordion-header"
+                        style="width: 100%; padding: 24px; display: flex; justify-content: space-between; align-items: center; background: transparent; border: none; color: var(--text-light); font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; text-align: left; cursor: pointer; transition: background-color 0.3s;">
+                        Do I need prior trading experience?
+                        <i class="fa-solid fa-plus text-accent" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="accordion-content"
+                        style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 24px;">
+                        <p class="text-muted" style="padding-bottom: 24px;">Not at all. The KIS Trading methodology is
+                            designed to be accessible to beginners while
+                            providing advanced insights for experienced traders looking to simplify their approach.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-panel" style="overflow: hidden;">
+                    <button class="accordion-header"
+                        style="width: 100%; padding: 24px; display: flex; justify-content: space-between; align-items: center; background: transparent; border: none; color: var(--text-light); font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; text-align: left; cursor: pointer; transition: background-color 0.3s;">
+                        How much capital do I need to start?
+                        <i class="fa-solid fa-plus text-accent" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="accordion-content"
+                        style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 24px;">
+                        <p class="text-muted" style="padding-bottom: 24px;">We recommend starting on a demo or simulated
+                            account while you learn the strategy. Once you
+                            are consistently profitable in simulation, you can begin with as little as $500 to $1000
+                            using micro-contracts, or explore prop firm funding options.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-panel" style="overflow: hidden;">
+                    <button class="accordion-header"
+                        style="width: 100%; padding: 24px; display: flex; justify-content: space-between; align-items: center; background: transparent; border: none; color: var(--text-light); font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; text-align: left; cursor: pointer; transition: background-color 0.3s;">
+                        How does the 1-on-1 coaching work?
+                        <i class="fa-solid fa-plus text-accent" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="accordion-content"
+                        style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 24px;">
+                        <p class="text-muted" style="padding-bottom: 24px;">Coaching sessions are conducted via Zoom. We
+                            review your trades, refine your strategy
+                            execution, and tackle any psychological hurdles holding you back. It is a highly customized
+                            experience based on your current skill level.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item glass-panel" style="overflow: hidden;">
+                    <button class="accordion-header"
+                        style="width: 100%; padding: 24px; display: flex; justify-content: space-between; align-items: center; background: transparent; border: none; color: var(--text-light); font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; text-align: left; cursor: pointer; transition: background-color 0.3s;">
+                        Why is the approach called "Keep It Simple"?
+                        <i class="fa-solid fa-plus text-accent" style="transition: transform 0.3s ease;"></i>
+                    </button>
+                    <div class="accordion-content"
+                        style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; padding: 0 24px;">
+                        <p class="text-muted" style="padding-bottom: 24px;">Most retail traders fail because they
+                            overcomplicate their charts with lagging indicators. We
+                            strip all of that away to focus purely on price action and market structure—the only true
+                            leading indicators.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="consultation" class="cta-section section-padding text-center relative overflow-hidden">
+        <div class="cta-bg"></div>
+        <div class="container relative z-10">
+            <h2 class="cta-title">Ready to Elevate Your Edge?</h2>
+            <p class="cta-subtitle mx-auto">Stop guessing. Start executing with institutional precision. Schedule your
+                consultation with David today.</p>
+            <a href="#" class="btn btn-white btn-large hover-glow">Book Your Free Consultation</a>
+            <p class="guarantee-text mt-20"><i class="fa-solid fa-lock text-sm"></i> No commitment required. 100%
+                confidential.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer border-top">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <img src="assets/logo.png" alt="KIS Trading Logo" class="footer-logo mb-20">
+                <p class="footer-desc text-sm">Professional trading coaching dedicated to creating independent,
+                    consistently
+                    profitable traders.</p>
+            </div>
+            <div class="footer-links">
+                <h4 class="text-light">Quick Links</h4>
+                <a href="#dashboard">Markets</a>
+                <a href="#about">Our Story</a>
+                <a href="#philosophy">Methodology</a>
+            </div>
+            <div class="footer-contact">
+                <h4 class="text-light">Contact</h4>
+                <p><i class="fa-solid fa-envelope text-accent"></i> david@kistrading.net</p>
+                <div class="social-links mt-20">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom border-top-subtle pt-20 mt-40">
+            <div class="container flex justify-between text-xs text-muted">
+                <p>&copy; 2026 KIS Trading. All Rights Reserved.</p>
+                <p class="disclaimer text-right" style="max-width: 500px;">Risk Disclaimer: Trading carries a high level
+                    of risk and may not be suitable for all
+                    investors. Past performance is not indicative of future results.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
